@@ -1,0 +1,25 @@
+:root {
+  color-scheme: dark;
+  --bg: #04070d;
+  --panel: rgba(6, 10, 18, 0.84);
+  --panel-strong: rgba(4, 8, 14, 0.96);
+  --line: rgba(255, 255, 255, 0.12);
+  --text: #f6f7fb;
+  --muted: #d8e0ec;
+  --accent: #ffb86b;
+  --accent-2: #ff6b8b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(255, 184, 107, 0.08), transparent 16%),
+    radial-gradient(circle at right, rgba(255, 107, 139, 0.08), transparent 20%),
+    linear-gradient(135deg, #03060b 0%, #07111b 42%, #02050a 100%);
+}
+
