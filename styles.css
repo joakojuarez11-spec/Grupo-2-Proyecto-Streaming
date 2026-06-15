@@ -39,6 +39,14 @@
   --font-body: "Inter", sans-serif;
 }
 
+body {
+  font-family: var(--font-body);
+
+  background-color: var(--color-tertiary-dark);
+
+  color: var(--color-text-primary);
+}
+
 /* ===== NAVBAR ===== */
 .navbar {
   background: linear-gradient(
