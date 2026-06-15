@@ -118,3 +118,24 @@ btn-buscar {
   transform: translate(-2px);
   box-shadow: 0 0 20px rgba(106, 13, 173, 0.6);
 }
+.btn-suscribirse {
+  background: var(--color-primary);
+
+  border: 2px solid var(--color-primary);
+
+  color: white;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+
+  box-shadow: 0 0 15px rgba(255, 122, 0, 0.35);
+}
+
+.btn-suscribirse:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 0 25px rgba(255, 122, 0, 0.75);
+
+  color: white;
+}
