@@ -99,16 +99,27 @@ body {
   transition: 0.3s;
 }
 .form-control:hover {
-  background: 0 0 15px rgba(255, 122, 0, 0.35);
+  background: rgba(255, 255, 255, 0.08);
   color: white;
   border-color: var(--color-primary);
   box-shadow: 0 0 15px rgba(255, 122, 0, 0.35);
+}
+.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.05);
+
+  color: white;
+
+  border-color: var(--color-primary);
+
+  box-shadow: 0 0 15px rgba(255, 122, 0, 0.35);
+
+  outline: none;
 }
 .form-control::placeholder {
   color: var(--color-tertiary-medium);
   opacity: 1;
 }
-btn-buscar {
+.btn-buscar {
   background-color: var(--color-primary);
   color: var(--color-text-primary);
   font-family: var(--font-body);
@@ -120,6 +131,20 @@ btn-buscar {
   background-color: var(--color-secondary);
   color: var(--color-text-primary);
 }
+.btn-ingresar {
+  background: transparent;
+
+  border: 2px solid var(--color-secondary);
+
+  color: var(--color-text-primary);
+
+  font-weight: 600;
+
+  transition: 0.3s;
+
+  box-shadow: 0 0 10px rgba(106, 13, 173, 0.25);
+}
+
 .btn-ingresar:hover {
   background-color: var(--color-secondary);
   color: white;
