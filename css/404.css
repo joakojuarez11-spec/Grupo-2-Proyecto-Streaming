@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-primary: #ff7a00;
+
+  --color-secondary: #6a0dad;
+
+  --color-tertiary-dark: #343232;
+
+  --color-tertiary-medium: #b0b0b0;
+
+  --color-tertiary-light: #6e6a73;
+
+  /* ===== ESTADOS ===== */
+
+  --color-success: #0fffc1;
+
+  --color-error: #f32213;
+
+  --color-info: #09ebef;
+
+  --color-warning: #ebe70e;
+
+  /* ===== TEXTO ===== */
+
+  --color-text-primary: #fffdfd;
+
+  --color-text-secondary: #ff00b6;
+
+  --color-text-tertiary: #6095c4;
+
+  /* ===== FUENTES ===== */
+
+  --font-heading: "Poppins", sans-serif;
+
+  --font-body: "Inter", sans-serif;
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+p {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+}
+.error404 {
+  min-height: 100vh;
+
+  background:
+    linear-gradient(rgba(17, 17, 17, 0.7), rgba(26, 16, 40, 0.7)),
+    url("../imagenes/img\ error\ 404.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+}
+.error-number {
+  font-size: 10rem;
+  font-weight: 900;
+
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    0 0 20px rgba(255, 123, 0, 0.3),
+    0 0 30px rgba(139, 44, 245, 0.3);
+}
+.btn {
+  font-family: var(--font-body);
+  background-color: var(--color-primary);
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: var(--color-secondary);
+  transform: translateY(-2px);
+}
