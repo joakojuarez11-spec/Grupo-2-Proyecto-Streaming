@@ -9,6 +9,8 @@
   --accent: #ffb86b;
   --accent-2: #ff6b8b;
 }
+:root {
+  --color-primary: #ff7a00;
 
 * { box-sizing: border-box; }
 
