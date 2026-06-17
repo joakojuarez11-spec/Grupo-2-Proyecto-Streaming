@@ -1,32 +1,84 @@
 :root {
   --color-primary: #ff7a00;
   --color-secondary: #6a0dad;
-  --color-tertiary: #343232, #b0b0b0, #6e6a73;
+  --color-tertiary-dark: #343232;
+  --color-tertiary-light: #b0b0b0;
+  --color-tertiary: #6e6a73;
+  --color-background: #1c1c23;
+  --color-light: #fffdfdfe;
   --color-state: #0fffc1, #f32213, #09ebef, #ebe70e;
   --color-text-primary: #fffdfdfe;
   --color-text-secondary: #ff00b6;
   --color-text-tertiary: #6095c4;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: var(--font-body);
-
-  background-color: var(--color-tertiary-dark);
-
   color: var(--color-text-primary);
+  background: linear-gradient(
+    90deg,
+    var(--color-tertiary-dark),
+    var(--color-background)
+  );
 }
+
+.card-catalog {
+  background: linear-gradient(
+    45deg,
+    var(--color-background),
+    var(--color-secondary)
+  );
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-secondary);
+}
+
+.card-suscribe {
+  background: linear-gradient(
+    45deg,
+    var(--color-background),
+    var(--color-primary)
+  );
+  color: var(--color-light);
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-tertiary-dark);
+  font-family: var(--font-body);
+  font-weight: 600;
+  border: none;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+}
+
+.carousel-caption p,h5 {
+  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  }
+
 /* ===== NAVBAR ===== */
 .navbar {
   background: linear-gradient(
     90deg,
-    rgba(15, 15, 20, 0.95),
-    rgba(28, 28, 35, 0.95)
+    var(--color-tertiary-dark),
+    var(--color-background)
   );
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 122, 0, 0.25);
+  border-bottom: 1px solid var(--color-primary  );
   box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.5),
-    0 0 20px rgba(255, 122, 0, 0.1);
+    0 10px 30px var(--color-background),
+    0 0 20px var(--color-tertiary-dark);
   padding: 1rem 0;
 }
 .logo {
@@ -61,21 +113,21 @@ body {
   width: 100%;
 }
 .form-control {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-background);
   border: 1px solid var(--color-secondary);
-  color: white;
+  color: var(--color-light);
   transition: 0.3s;
 }
 .form-control:hover {
   background: rgba(255, 255, 255, 0.08);
-  color: white;
+  color: var(--color-light);
   border-color: var(--color-primary);
   box-shadow: 0 0 15px rgba(255, 122, 0, 0.35);
 }
 .form-control:focus {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--color-background);
 
-  color: white;
+  color: var(--color-light);
 
   border-color: var(--color-primary);
 
@@ -115,7 +167,7 @@ body {
 
 .btn-ingresar:hover {
   background-color: var(--color-secondary);
-  color: white;
+  color: var(--color-light);
   transform: translate(-2px);
   box-shadow: 0 0 20px rgba(106, 13, 173, 0.6);
 }
@@ -124,7 +176,7 @@ body {
 
   border: 2px solid var(--color-primary);
 
-  color: white;
+  color: var(--color-light);
 
   font-weight: 600;
 
@@ -138,7 +190,7 @@ body {
 
   box-shadow: 0 0 25px rgba(255, 122, 0, 0.75);
 
-  color: white;
+  color: var(--color-light);
 }
 
 .navbar-toggler {
@@ -156,11 +208,11 @@ body {
 /* FOOTER */
 .footer{
 
-background:
-radial-gradient(circle at top left,#6A0DAD,transparent 35%),
-radial-gradient(circle at bottom right,#FF7A00,transparent 30%),
-linear-gradient(135deg,#343232,#6e6a73);
-
+background: linear-gradient(
+    90deg,
+    var(--color-tertiary-dark),
+    rgba(28, 28, 35, 0.95)
+  );
 color:#B0B0B0;
 
 padding:40px 20px;
