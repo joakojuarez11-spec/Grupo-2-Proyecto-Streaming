@@ -10,6 +10,8 @@
   --color-text-primary: #fffdfdfe;
   --color-text-secondary: #ff00b6;
   --color-text-tertiary: #6095c4;
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
 }
 
 * {
@@ -119,10 +121,10 @@ body {
   transition: 0.3s;
 }
 .form-control:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--color-tertiary-dark);
   color: var(--color-light);
   border-color: var(--color-primary);
-  box-shadow: 0 0 15px rgba(255, 122, 0, 0.35);
+  box-shadow: 0 0 15px var(--color-primary);
 }
 .form-control:focus {
   background-color: var(--color-background);
@@ -131,7 +133,7 @@ body {
 
   border-color: var(--color-primary);
 
-  box-shadow: 0 0 15px rgba(255, 122, 0, 0.35);
+  box-shadow: 0 0 15px var(--color-primary);
 
   outline: none;
 }
@@ -162,14 +164,14 @@ body {
 
   transition: 0.3s;
 
-  box-shadow: 0 0 10px rgba(106, 13, 173, 0.25);
+  box-shadow: 0 0 10px var(--color-secondary);
 }
 
 .btn-ingresar:hover {
   background-color: var(--color-secondary);
   color: var(--color-light);
   transform: translate(-2px);
-  box-shadow: 0 0 20px rgba(106, 13, 173, 0.6);
+  box-shadow: 0 0 20px var(--color-secondary);
 }
 .btn-suscribirse {
   background: var(--color-primary);
@@ -182,13 +184,13 @@ body {
 
   transition: 0.3s;
 
-  box-shadow: 0 0 15px rgba(255, 122, 0, 0.35);
+  box-shadow: 0 0 15px var(--color-primary);
 }
 
 .btn-suscribirse:hover {
   transform: translateY(-2px);
 
-  box-shadow: 0 0 25px rgba(255, 122, 0, 0.75);
+  box-shadow: 0 0 25px var(--color-primary);
 
   color: var(--color-light);
 }
@@ -202,233 +204,96 @@ body {
 }
 
 .navbar-toggler:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 122, 0, 0.25);
+  box-shadow: 0 0 0 0.2rem var(--color-primary);
 }
 
 /* FOOTER */
-.footer{
+footer{
+    background: linear-gradient(
+        180deg,
+        var(--color-tertiary),
+        var(--color-tertiary-dark)
+    );
 
-background: linear-gradient(
-    90deg,
-    var(--color-tertiary-dark),
-    rgba(28, 28, 35, 0.95)
-  );
-color:#B0B0B0;
-
-padding:40px 20px;
-
-border-top:3px solid #FF7A00;
-
+    padding: 40px 20px;
+    color: var(--color-text-primary);
+    text-align:center;
 }
 
 
 
 .footer-container{
-
-display:flex;
-
-justify-content:space-between;
-
-gap:30px;
-
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:30px;
 }
 
-
-.footer-brand h2{
-
-color:#FF7A00;
-
-font-size:32px;
-
-}
-
-
-.footer-brand span{
-
-color:#6A0DAD;
-
-}
-
-.footer-logo {
-  width: 150px;
-  margin-bottom: 20px;
-  align-self: flex-start;
-  margin-right: 80px;
-}
-
-
-
-
-.footer-links{
-
-display:flex;
-
-gap:50px;
-
-}
 
 
 .footer-section{
-
-display:flex;
-
-flex-direction:column;
-
-gap:10px;
-
+    flex:1;
+    min-width:220px;
 }
 
 
 .footer-section h3{
-
-color:#FF7A00;
-
+    color:var(--color-secondary);
+    font-size:22px;
+    margin-bottom:15px;
 }
 
 
 .footer-section a{
-
-color:#B0B0B0;
-
-text-decoration:none;
-
+    color:var(--color-primary);
+    text-decoration:none;
+    font-size:15px;
 }
 
 
 .footer-section a:hover{
-
-color:#0FFFC1;
-
+    color:var(--color-primary);
 }
 
 
-
-.icons{
-
-display:flex;
-
-gap:15px;
-
+.footer-icons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
 }
 
 
-.icon{
+.footer-icons a{
+    width:50px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-font-size:28px;
+    background:var(--color-tertiary);
+    border-radius:50%;
 
-color:#6A0DAD;
+    
+    font-size:18px;
 
-transition:.3s;
-
+    transition:.3s;
 }
 
 
-.icon:hover{
-
-color:#FF7A00;
-
-transform:scale(1.15);
-
+.footer-icons a:hover{
+    background:var(--color-primary);
+    transform:translateY(-5px);
 }
-
 
 
 .footer-bottom{
+    margin-top:30px;
+    padding-top:20px;
 
-margin-top:30px;
+    border-top:1px solid var(--color-text-tertiary);
 
-text-align:center;
-
-border-top:1px solid #B0B0B0;
-
-padding-top:15px;
-
-}
-
-
-
-
-
-
-/* SM - celulares */
-@media(max-width:576px){
-
-.footer-container{
-
-flex-direction:column;
-
-text-align:center;
-
-}
-
-
-.footer-links{
-
-flex-direction:column;
-
-gap:25px;
-
-}
-
-
-.icons{
-
-justify-content:center;
-
-}
-
-
-.footer-brand h2{
-
-font-size:26px;
-
-}
-
-}
-
-
-
-
-
-
-/* MD - tablets */
-@media(min-width:577px) and (max-width:992px){
-
-.footer-container{
-
-flex-direction:column;
-
-align-items:center;
-
-}
-
-
-.footer-links{
-
-width:100%;
-
-justify-content:center;
-
-}
-
-
-}
-
-
-
-
-
-/* LG - escritorio */
-@media(min-width:993px){
-
-
-.footer-container{
-
-max-width:1200px;
-
-margin:auto;
-
-}
-
-
+    color:var(--color-text-secondary);
+    font-size:14px;
 }
