@@ -1,0 +1,434 @@
+:root {
+  --color-primary: #ff7a00;
+  --color-secondary: #6a0dad;
+  --color-tertiary-dark: #343232;
+  --color-tertiary-light: #b0b0b0;
+  --color-tertiary: #6e6a73;
+  --color-background: #1c1c23;
+  --color-light: #fffdfdfe;
+  --color-state: #0fffc1, #f32213, #09ebef, #ebe70e;
+  --color-text-primary: #fffdfdfe;
+  --color-text-secondary: #ff00b6;
+  --color-text-tertiary: #6095c4;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background: linear-gradient(
+    90deg,
+    var(--color-tertiary-dark),
+    var(--color-background)
+  );
+}
+
+.card-catalog {
+  background: linear-gradient(
+    45deg,
+    var(--color-background),
+    var(--color-secondary)
+  );
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-secondary);
+}
+
+.card-suscribe {
+  background: linear-gradient(
+    45deg,
+    var(--color-background),
+    var(--color-primary)
+  );
+  color: var(--color-light);
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-tertiary-dark);
+  font-family: var(--font-body);
+  font-weight: 600;
+  border: none;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+}
+
+.carousel-caption p,h5 {
+  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  }
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: linear-gradient(
+    90deg,
+    var(--color-tertiary-dark),
+    var(--color-background)
+  );
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-primary  );
+  box-shadow:
+    0 10px 30px var(--color-background),
+    0 0 20px var(--color-tertiary-dark);
+  padding: 1rem 0;
+}
+.logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-right: 0.5rem;
+}
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+}
+.nav-link {
+  color: var(--color-text-primary);
+  transition: 0.3s;
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  background: var(--color-primary);
+  transition: 0.3s;
+}
+.nav-link:hover {
+  color: var(--color-primary);
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.form-control {
+  background: var(--color-background);
+  border: 1px solid var(--color-secondary);
+  color: var(--color-light);
+  transition: 0.3s;
+}
+.form-control:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-light);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 15px rgba(255, 122, 0, 0.35);
+}
+.form-control:focus {
+  background-color: var(--color-background);
+
+  color: var(--color-light);
+
+  border-color: var(--color-primary);
+
+  box-shadow: 0 0 15px rgba(255, 122, 0, 0.35);
+
+  outline: none;
+}
+.form-control::placeholder {
+  color: var(--color-tertiary-medium);
+  opacity: 1;
+}
+.btn-buscar {
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  border: none;
+  transition: 0.3s;
+}
+.btn-buscar:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-text-primary);
+}
+.btn-ingresar {
+  background: transparent;
+
+  border: 2px solid var(--color-secondary);
+
+  color: var(--color-text-primary);
+
+  font-weight: 600;
+
+  transition: 0.3s;
+
+  box-shadow: 0 0 10px rgba(106, 13, 173, 0.25);
+}
+
+.btn-ingresar:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+  transform: translate(-2px);
+  box-shadow: 0 0 20px rgba(106, 13, 173, 0.6);
+}
+.btn-suscribirse {
+  background: var(--color-primary);
+
+  border: 2px solid var(--color-primary);
+
+  color: var(--color-light);
+
+  font-weight: 600;
+
+  transition: 0.3s;
+
+  box-shadow: 0 0 15px rgba(255, 122, 0, 0.35);
+}
+
+.btn-suscribirse:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 0 25px rgba(255, 122, 0, 0.75);
+
+  color: var(--color-light);
+}
+
+.navbar-toggler {
+  border-color: var(--color-primary);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 122, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 122, 0, 0.25);
+}
+
+/* FOOTER */
+.footer{
+
+background: linear-gradient(
+    90deg,
+    var(--color-tertiary-dark),
+    rgba(28, 28, 35, 0.95)
+  );
+color:#B0B0B0;
+
+padding:40px 20px;
+
+border-top:3px solid #FF7A00;
+
+}
+
+
+
+.footer-container{
+
+display:flex;
+
+justify-content:space-between;
+
+gap:30px;
+
+}
+
+
+.footer-brand h2{
+
+color:#FF7A00;
+
+font-size:32px;
+
+}
+
+
+.footer-brand span{
+
+color:#6A0DAD;
+
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 20px;
+  align-self: flex-start;
+  margin-right: 80px;
+}
+
+
+
+
+.footer-links{
+
+display:flex;
+
+gap:50px;
+
+}
+
+
+.footer-section{
+
+display:flex;
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
+
+.footer-section h3{
+
+color:#FF7A00;
+
+}
+
+
+.footer-section a{
+
+color:#B0B0B0;
+
+text-decoration:none;
+
+}
+
+
+.footer-section a:hover{
+
+color:#0FFFC1;
+
+}
+
+
+
+.icons{
+
+display:flex;
+
+gap:15px;
+
+}
+
+
+.icon{
+
+font-size:28px;
+
+color:#6A0DAD;
+
+transition:.3s;
+
+}
+
+
+.icon:hover{
+
+color:#FF7A00;
+
+transform:scale(1.15);
+
+}
+
+
+
+.footer-bottom{
+
+margin-top:30px;
+
+text-align:center;
+
+border-top:1px solid #B0B0B0;
+
+padding-top:15px;
+
+}
+
+
+
+
+
+
+/* SM - celulares */
+@media(max-width:576px){
+
+.footer-container{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+
+.footer-links{
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+
+.icons{
+
+justify-content:center;
+
+}
+
+
+.footer-brand h2{
+
+font-size:26px;
+
+}
+
+}
+
+
+
+
+
+
+/* MD - tablets */
+@media(min-width:577px) and (max-width:992px){
+
+.footer-container{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+
+.footer-links{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+
+}
+
+
+
+
+
+/* LG - escritorio */
+@media(min-width:993px){
+
+
+.footer-container{
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+
+}

@@ -47,7 +47,6 @@ footer{
 }
 
 
-.footer-section p,
 .footer-section a{
     color:var(--color-primary);
     text-decoration:none;
