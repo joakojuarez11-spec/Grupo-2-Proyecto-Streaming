@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StreamingTuc</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+
+  <body>
+    <main class="container main-form">
+      <div class="form-card">
+        <h1 class="text-center titulo mb-3">Iniciar Sesión</h1>
+
+        <p class="text-center text-secondary mb-5">
+          Ingresa para disfrutar de tus películas y series favoritas
+        </p>
+
+        <form class="was-validated" action="../404.html">
+          <div class="mb-4">
+            <label class="form-label"> Correo Electrónico </label>
+
+            <input
+              type="email"
+              class="form-control"
+              required
+              pattern=".+@.+\.[a-zA-Z]{2,}"
+              placeholder="Ejemplo: usuario@gmail.com"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label"> Contraseña </label>
+
+            <input
+              type="password"
+              class="form-control"
+              required
+              pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}"
+              placeholder="Mínimo 8 caracteres, 1 mayúscula y 1 número"
+            />
+          </div>
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" required />
+
+            <label class="form-check-label"> Recordarme </label>
+          </div>
+
+          <div class="text-end mb-4">
+            <a href="../404.html" class="forgot-password">
+              ¿Olvidaste tu contraseña?
+            </a>
+          </div>
+
+          <button type="submit" class="btn btn-register w-100">
+            Iniciar Sesión
+          </button>
+          <p class="text-center mt-4 login-link">
+            ¿No tienes cuenta?
+            <a href="../404.html">Regístrate</a>
+          </p>
+        </form>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
