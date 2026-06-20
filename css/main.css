@@ -32,7 +32,7 @@
   box-sizing: border-box;
 }
 
-.carousel-caption p {
+.carousel-caption p,h5 {
   font-family: var(--font-heading);
   font-weight: 700;
   text-shadow: 0 0 5px var(--color-background);
