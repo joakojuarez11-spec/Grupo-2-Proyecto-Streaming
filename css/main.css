@@ -1,5 +1,5 @@
 :root {
-  --color-primary: #ff7a00;
+  --color-primary: rgb(255, 122, 0);
   --color-secondary: #6a0dad;
   --color-tertiary-dark: #343232;
   --color-tertiary-light: #b0b0b0;
@@ -7,15 +7,21 @@
   --color-tertiary: #6e6a73;
   --color-background: #1c1c23;
   --color-light: #fffdfdfe;
-  --color-state: #0fffc1, #f32213, #09ebef, #ebe70e;
   --color-form-input: rgba(52, 50, 50, 0.9);
-  --color-success: #0fffc1;
-  --color-error: #f32213;
-  --color-info: #09ebef;
-  --color-warning: #ebe70e;
   --color-text-primary: #fffdfdfe;
   --color-text-secondary: #ff00b6;
   --color-text-tertiary: #6095c4;
+  --color-shadow-primary-soft: rgba(255, 122, 0, 0.12);
+  --color-shadow-primary-medium: rgba(255, 122, 0, 0.18);
+  --color-shadow-primary-strong: rgba(255, 122, 0, 0.20);
+  --color-shadow-primary-glow: rgba(255, 122, 0, 0.35);
+  --color-shadow-dark-strong: rgba(0, 0, 0, 0.45);
+  --color-shadow-dark-medium: rgba(0, 0, 0, 0.35);
+  --color-shadow-secondary-soft: rgba(66, 52, 77, 0.06);
+  --color-overlay-dark: rgba(52, 50, 50, 0.95);
+  --color-overlay-light: rgba(52, 50, 50, 0.9);
+  --color-overlay-secondary: rgba(106, 13, 173, 0.15);
+  --color-transparent: transparent;
   --font-heading: "Montserrat", sans-serif;
   --font-body: "Inter", sans-serif;
 }
@@ -36,51 +42,78 @@ body {
   );
 }
 
-.card-catalog {
-  background: linear-gradient(
-    45deg,
-    var(--color-background),
-    var(--color-secondary)
-  );
-  color: var(--color-text-primary);
-  border: 2px solid var(--color-secondary);
-}
-
-.card-suscribe {
-  background: linear-gradient(
-    45deg,
-    var(--color-background),
-    var(--color-primary)
-  );
-  color: var(--color-light);
-  border: none;
-}
-
-.btn-primary {
-  background-color: var(--color-primary);
-  color: var(--color-tertiary-dark);
-  font-family: var(--font-body);
-  font-weight: 600;
-  border: none;
-  transition: 0.3s;
-}
-.btn-primary:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-light);
-}
-
 .carousel-caption p,h5 {
   color: var(--color-text-primary);
   font-family: var(--font-heading);
   font-weight: 700;
   }
 
+.titulo,
+.titulo-form {
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--color-transparent);
+}
+
+.btn-ingresar {
+  background: transparent;
+  border: none;
+  color: var(--color-text-primary);
+  font-weight: 700;
+  transition: 0.3s;
+}
+.btn-ingresar:hover {
+  background: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--color-shadow-primary-strong);
+}
+
+.btn-primary,
+.btn-buscar,
+.btn-suscribirse {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  border: none;
+  color: var(--color-text-primary);
+  font-weight: 700;
+  transition: 0.3s;
+  box-shadow: 0 0 12px var(--color-shadow-primary-soft);
+}
+
+.btn-primary:hover,
+.btn-buscar:hover,
+.btn-suscribirse:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--color-shadow-primary-strong);
+  color: var(--color-light);
+}
+
+.btn-register {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  border: none;
+  color: var(--color-text-primary);
+  font-weight: 700;
+  padding: 14px;
+  transition: 0.3s;
+  box-shadow: 0 0 12px var(--color-shadow-primary-soft);
+}
+
+.btn-register:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--color-shadow-primary-strong);
+}
+
+.form-check-label {
+  color: var(--color-text-primary);
+}
+
 /* ===== NAVBAR ===== */
 .navbar {
   background: linear-gradient(90deg, var(--color-tertiary-dark), var(--color-background));
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-secondary);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.45), 0 0 20px rgba(255,122,0,0.12);
+  box-shadow: 0 8px 24px var(--color-shadow-dark-strong), 0 0 20px var(--color-shadow-primary-soft);
   padding: 1rem 0;
 }
 .logo {
@@ -141,76 +174,17 @@ body {
   color: var(--color-tertiary-medium);
   opacity: 1;
 }
-.btn-buscar {
-  background-color: var(--color-primary);
-  color: var(--color-text-primary);
-  font-family: var(--font-body);
-  font-weight: 600;
-  border: none;
-  transition: 0.3s;
-}
-.btn-buscar:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-text-primary);
-}
-.btn-ingresar {
-  background: transparent;
-
-  border: 2px solid var(--color-secondary);
-
-  color: var(--color-text-primary);
-
-  font-weight: 600;
-
-  transition: 0.3s;
-
-  box-shadow: 0 0 10px var(--color-secondary);
-}
-
-.btn-ingresar:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-light);
-  transform: translate(-2px);
-  box-shadow: 0 0 20px var(--color-secondary);
-}
-.btn-suscribirse {
-  background: var(--color-primary);
-
-  border: 2px solid var(--color-primary);
-
-  color: var(--color-light);
-
-  font-weight: 600;
-
-  transition: 0.3s;
-
-  box-shadow: 0 0 15px var(--color-primary);
-}
-
-.btn-suscribirse:hover {
-  transform: translateY(-2px);
-
-  box-shadow: 0 0 25px var(--color-primary);
-
-  color: var(--color-light);
-}
-
 .navbar-toggler {
   border-color: var(--color-primary);
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 122, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(255, 122, 0)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .navbar-toggler:focus {
   box-shadow: 0 0 0 0.2rem var(--color-primary);
 }
-
-/* Make navbar elements share suscripcion visual tone */
-.navbar-brand { color: var(--color-light); }
-.nav-link { color: var(--color-light); }
-.nav-link:hover { color: var(--color-primary); }
 
 
 /* FOOTER */
@@ -220,7 +194,7 @@ footer{
   color: var(--color-text-primary);
   text-align:center;
   border-top: 1px solid var(--color-secondary);
-  box-shadow: 0 -8px 24px rgba(0,0,0,0.35), 0 0 18px rgba(106,13,173,0.06);
+  box-shadow: 0 -8px 24px var(--color-shadow-dark-medium), 0 0 18px var(--color-shadow-secondary-soft);
 }
 
 
@@ -318,7 +292,7 @@ body.page-login .form-card {
   padding: 40px;
   border-radius: 40px;
   border: 1px solid var(--color-tertiary-dark);
-  box-shadow: 0 0 15px rgba(255, 122, 0, 0.35);
+  box-shadow: 0 0 15px var(--color-shadow-primary-glow);
 }
 
 body.page-login .main-form {
@@ -328,11 +302,6 @@ body.page-login .main-form {
 
 body.page-login .titulo {
   font-size: 3rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 body.page-login .form-label {
@@ -343,7 +312,7 @@ body.page-login .form-label {
 body.page-login .form-control,
 body.page-login .form-select {
   background-color: var(--color-form-input);
-  color: white;
+  color: var(--color-text-primary);
   border: 1px solid var(--color-secondary);
 }
 
@@ -353,34 +322,20 @@ body.page-login .form-control::placeholder {
 
 body.page-login .form-select option {
   background-color: var(--color-tertiary-dark);
-  color: white;
+  color: var(--color-text-primary);
 }
 
 body.page-login .form-control:focus,
 body.page-login .form-select:focus {
-  background: transparent;
-  color: white;
+  background: var(--color-transparent);
+  color: var(--color-text-primary);
   border-color: var(--color-secondary);
   box-shadow: none;
 }
 
-body.page-login .btn-register {
-  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
-  border: none;
-  color: white;
-  padding: 14px;
-  font-weight: 700;
-}
-
-body.page-login .btn-register:hover {
-  transform: translateY(-2px);
-  transition: 0.3s;
-}
-
-body.page-login .form-check-label { color: white; }
 body.page-login .forgot-password { color: var(--color-secondary); text-decoration: none; }
 body.page-login .forgot-password:hover { color: var(--color-primary); }
-body.page-login .login-link { color: white; }
+body.page-login .login-link { color: var(--color-text-primary); }
 body.page-login .login-link a { color: var(--color-primary); text-decoration: none; font-weight: 600; }
 body.page-login .login-link a:hover { color: var(--color-secondary); }
 
@@ -398,24 +353,15 @@ body.page-suscripcion {
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
-  color: white;
+  color: var(--color-text-primary);
 }
 
 body.page-suscripcion .suscripcion-container { margin-top: 180px; margin-bottom: 100px; }
 
-body.page-suscripcion .titulo,
-body.page-suscripcion .titulo-form {
-  font-weight: 800;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 body.page-suscripcion .titulo { font-size: 3rem; }
 
 body.page-suscripcion .plan-card {
-  background: rgba(52, 50, 50, 0.95);
+  background: var(--color-overlay-dark);
   padding: 30px;
   border-radius: 25px;
   border: 1px solid var(--color-secondary);
@@ -426,52 +372,47 @@ body.page-suscripcion .plan-card {
 }
 
 body.page-suscripcion .plan-card:hover { transform: translateY(-5px); }
-body.page-suscripcion .destacado { box-shadow: 0 0 20px rgba(255, 122, 0, 0.5); }
+body.page-suscripcion .destacado { box-shadow: 0 0 20px var(--color-shadow-primary-stronger); }
 
 body.page-suscripcion .plan-card h3 { color: var(--color-primary); font-weight: 700; margin-bottom: 20px; }
 body.page-suscripcion .plan-card h2 { margin-bottom: 25px; font-weight: 800; }
 body.page-suscripcion .plan-card ul { padding-left: 20px; margin-bottom: auto; }
 body.page-suscripcion .plan-card li { margin-bottom: 10px; }
 
-body.page-suscripcion .btn-plan,
-body.page-suscripcion .btn-register {
+body.page-suscripcion .btn-plan {
   background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
   border: none;
-  color: white;
+  color: var(--color-text-primary);
   font-weight: 700;
   padding: 12px;
 }
 
-body.page-suscripcion .btn-plan:hover,
-body.page-suscripcion .btn-register:hover { transform: translateY(-2px); transition: 0.3s; }
+body.page-suscripcion .btn-plan:hover { transform: translateY(-2px); transition: 0.3s; }
 
 body.page-suscripcion .form-card {
   max-width: 700px;
   margin: auto;
-  background: rgba(52, 50, 50, 0.95);
+  background: var(--color-overlay-dark);
   padding: 40px;
   border-radius: 30px;
   border: 1px solid var(--color-secondary);
-  box-shadow: 0 0 15px rgba(255, 122, 0, 0.35);
+  box-shadow: 0 0 15px var(--color-shadow-primary-glow);
 }
 
-body.page-suscripcion .form-control { background-color: rgba(52, 50, 50, 0.9); color: white; border: 1px solid var(--color-secondary); }
-body.page-suscripcion .form-control:focus { background-color: rgba(52, 50, 50, 0.9); color: white; border-color: var(--color-primary); box-shadow: none; }
+body.page-suscripcion .form-control { background-color: var(--color-overlay-light); color: var(--color-text-primary); border: 1px solid var(--color-secondary); }
+body.page-suscripcion .form-control:focus { background-color: var(--color-overlay-light); color: var(--color-text-primary); border-color: var(--color-primary); box-shadow: none; }
 body.page-suscripcion .form-control::placeholder { color: var(--color-tertiary-medium); }
-body.page-suscripcion .form-label { color: white; font-weight: 600; }
-body.page-suscripcion .form-select { background-color: rgba(52, 50, 50, 0.9); color: white; border: 1px solid var(--color-secondary); }
-body.page-suscripcion .form-select:focus { background-color: rgba(52, 50, 50, 0.9); color: white; border-color: var(--color-primary); box-shadow: none; }
-body.page-suscripcion .form-check-label { color: white; }
-body.page-suscripcion .plan-seleccionado { background: rgba(106, 13, 173, 0.15); border: 1px solid var(--color-secondary); border-radius: 15px; padding: 15px; text-align: center; }
+body.page-suscripcion .form-label { color: var(--color-text-primary); font-weight: 600; }
+body.page-suscripcion .form-select { background-color: var(--color-overlay-light); color: var(--color-text-primary); border: 1px solid var(--color-secondary); }
+body.page-suscripcion .form-select:focus { background-color: var(--color-overlay-light); color: var(--color-text-primary); border-color: var(--color-primary); box-shadow: none; }
+body.page-suscripcion .form-check-label { color: var(--color-text-primary); }
+body.page-suscripcion .plan-seleccionado { background: var(--color-overlay-secondary); border: 1px solid var(--color-secondary); border-radius: 15px; padding: 15px; text-align: center; }
 body.page-suscripcion .plan-seleccionado h5 { color: var(--color-primary); margin-bottom: 5px; }
 
 @media (max-width: 768px) {
   body.page-suscripcion .suscripcion-container { margin-top: 80px; margin-bottom: 50px; }
   body.page-suscripcion .titulo { font-size: 2rem; }
   body.page-suscripcion .form-card { padding: 25px; }
-}
-
-@media (max-width: 768px) {
   body.page-suscripcion .plan-card { text-align: center; }
   body.page-suscripcion .plan-card ul { list-style: none; padding-left: 0; }
   body.page-suscripcion .plan-card li { margin-bottom: 10px; }
@@ -485,7 +426,7 @@ body.page-index {
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
-  color: white;
+  color: var(--color-text-primary);
 }
 
 body.page-index #catalogo {
@@ -501,7 +442,7 @@ body.page-index #suscripcion {
 /* make cards use the same panel styling */
 body.page-index .card-catalog,
 body.page-index .card-suscribe {
-  background: rgba(52, 50, 50, 0.95);
+  background: var(--color-overlay-dark);
   padding: 20px;
   border-radius: 25px;
   border: 1px solid var(--color-secondary);
@@ -514,7 +455,7 @@ body.page-index .card-suscribe {
 body.page-index .card-catalog:hover,
 body.page-index .card-suscribe:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.35), 0 0 20px rgba(255,122,0,0.18);
+  box-shadow: 0 8px 24px var(--color-shadow-dark-medium), 0 0 20px var(--color-shadow-primary-medium);
 }
 
 body.page-index .card-catalog .card-img-top {
@@ -531,11 +472,12 @@ body.page-index .card-catalog .card-body {
 }
 
 body.page-index .card-catalog .card-title {
+  color: var(--color-primary);
   font-weight: 800;
 }
 
 body.page-index .card-catalog .card-text {
-  color: var(--color-tertiary-light);
+  color: var(--color-light);
   margin-bottom: 8px;
 }
 
@@ -547,15 +489,14 @@ body.page-index .card-catalog .btn-primary {
 /* Buttons on index should match suscripcion style */
 body.page-index .btn-primary,
 body.page-index .btn-suscribirse,
-body.page-index .btn-buscar,
-body.page-index .btn-ingresar {
+body.page-index .btn-buscar {
   background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
   border: none;
-  color: white;
+  color: var(--color-text-primary);
   font-weight: 700;
   padding: 10px 16px;
   transition: 0.3s;
-  box-shadow: 0 0 12px rgba(255,122,0,0.12);
+  box-shadow: 0 0 12px var(--color-shadow-primary-soft);
 }
 
 body.page-index .btn-primary:hover,
@@ -563,7 +504,7 @@ body.page-index .btn-suscribirse:hover,
 body.page-index .btn-buscar:hover,
 body.page-index .btn-ingresar:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255,122,0,0.20);
+  box-shadow: 0 8px 24px var(--color-shadow-primary-strong);
   color: var(--color-light);
 }
 

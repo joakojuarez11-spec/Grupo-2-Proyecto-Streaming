@@ -77,12 +77,3 @@ p {
     0 0 20px rgba(255, 123, 0, 0.3),
     0 0 30px rgba(139, 44, 245, 0.3);
 }
-.btn {
-  font-family: var(--font-body);
-  background-color: var(--color-primary);
-  transition: 0.3s;
-}
-.btn:hover {
-  background-color: var(--color-secondary);
-  transform: translateY(-2px);
-}
