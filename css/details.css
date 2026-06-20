@@ -1,0 +1,320 @@
+:root{
+
+--morado:#6A0DAD;
+--naranja:#FF7A00;
+--negro:#111;
+
+}
+
+
+
+
+.hero-pelicula{
+
+
+    position:relative;
+
+    width:100%;
+
+    height:80vh;
+
+    overflow:hidden;
+
+
+}
+
+
+
+/* IMAGEN DE FONDO */
+
+
+.imagen-fondo{
+
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+
+}
+
+
+
+/* TRANSPARENCIA ENCIMA */
+
+
+.capa-transparente{
+
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+
+    background:
+
+    linear-gradient(
+
+    to right,
+
+    rgba(17,17,17,0.95),
+
+    rgba(17,17,17,0.5),
+
+    rgba(17,17,17,0.2)
+
+    );
+
+
+}
+
+
+
+
+/* TEXTO ENCIMA */
+
+
+.contenido-pelicula{
+
+
+    position:relative;
+
+    z-index:2;
+
+
+    height:100%;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+
+    padding-left:8%;
+
+
+    color:white;
+
+
+}
+
+
+
+
+.contenido-pelicula h1{
+
+
+    font-size:60px;
+
+    font-weight:800;
+
+
+    text-shadow:
+
+    0px 0px 20px black;
+
+
+}
+
+
+
+
+.contenido-pelicula p{
+
+
+    max-width:600px;
+
+
+    font-size:20px;
+
+
+    color:#B0B0B0;
+
+
+}
+
+
+
+
+
+/* BOTONES */
+
+
+.botones{
+
+
+display:flex;
+
+gap:20px;
+
+margin-top:30px;
+
+
+}
+
+
+
+
+.btn-ver{
+
+
+background:#6A0DAD;
+
+color:white;
+
+border:none;
+
+
+padding:15px 35px;
+
+
+border-radius:30px;
+
+
+font-size:18px;
+
+
+transition:0.3s;
+
+
+}
+
+
+
+.btn-ver:hover{
+
+
+background:#FF7A00;
+
+
+transform:scale(1.05);
+
+
+}
+
+
+
+
+.btn-lista{
+
+
+background:transparent;
+
+
+border:2px solid #FF7A00;
+
+
+color:#FF7A00;
+
+
+padding:15px 35px;
+
+
+border-radius:30px;
+
+
+font-size:18px;
+
+
+}
+
+
+
+
+.btn-lista:hover{
+
+
+background:#FF7A00;
+
+
+color:white;
+
+
+}
+
+
+
+
+/* RESPONSIVE */
+
+
+/* SM */
+
+@media(max-width:576px){
+
+
+.hero-pelicula{
+
+height:70vh;
+
+}
+
+
+
+.contenido-pelicula{
+
+padding:25px;
+
+}
+
+
+
+.contenido-pelicula h1{
+
+
+font-size:35px;
+
+
+}
+
+
+
+}
+
+
+
+
+/* MD */
+
+
+@media(min-width:768px){
+
+
+.contenido-pelicula h1{
+
+
+font-size:50px;
+
+
+}
+
+
+}
+
+
+
+
+/* LG */
+
+
+@media(min-width:992px){
+
+
+.contenido-pelicula h1{
+
+
+font-size:70px;
+
+
+}
+
+
+}
