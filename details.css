@@ -1,18 +1,25 @@
-:root{
+:root   
 
---morado:#6A0DAD;
---naranja:#FF7A00;
---negro:#111;
+{
+
+    --color-fondo: #111111;
+
+    --color-primario: #6A0DAD;
+
+    --color-secundario: #FF7A00;
+
+    --color-texto: #B0B0B0;
 
 }
 
-
-
+body {
+    background-color: var(--color-fondo);
+}
 
 .hero-pelicula{
 
 
-    position:relative;
+    position:fixed;
 
     width:100%;
 
@@ -38,7 +45,6 @@
     height:100%;
 
     object-fit:cover;
-
 
 }
 
