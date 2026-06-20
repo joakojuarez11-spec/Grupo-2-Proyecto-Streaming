@@ -32,16 +32,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: var(--font-body);
-  color: var(--color-text-primary);
-  background: linear-gradient(
-    90deg,
-    var(--color-tertiary-dark),
-    var(--color-background)
-  );
-}
-
 .carousel-caption p,h5 {
   color: var(--color-text-primary);
   font-family: var(--font-heading);
@@ -276,8 +266,8 @@ footer{
 }
 
 /* ===== Page-specific: Login ===== */
-body.page-login {
-  background-image: url("../assets/img-form.png");
+body {
+  background-image: url("../assets/main-background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -346,16 +336,6 @@ body.page-login .login-link a:hover { color: var(--color-secondary); }
 }
 
 /* ===== Page-specific: Suscripcion ===== */
-body.page-suscripcion {
-  background-image: url("../assets/img-suscripcion.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 100vh;
-  color: var(--color-text-primary);
-}
-
 body.page-suscripcion .suscripcion-container { margin-top: 180px; margin-bottom: 100px; }
 
 body.page-suscripcion .titulo { font-size: 3rem; }
@@ -418,30 +398,8 @@ body.page-suscripcion .plan-seleccionado h5 { color: var(--color-primary); margi
   body.page-suscripcion .plan-card li { margin-bottom: 10px; }
 }
 
-/* ===== Page-specific: Index (consistent visual style) ===== */
-body.page-index {
-  background-image: url("../assets/img-suscripcion.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 100vh;
-  color: var(--color-text-primary);
-}
-
-body.page-index #catalogo {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-body.page-index #suscripcion {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
 /* make cards use the same panel styling */
-body.page-index .card-catalog,
-body.page-index .card-suscribe {
+.card-catalog, .card-suscribe {
   background: var(--color-overlay-dark);
   padding: 20px;
   border-radius: 25px;
