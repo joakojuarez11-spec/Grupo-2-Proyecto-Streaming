@@ -17,7 +17,7 @@ body {
    
 }
 
-.hero-pelicula{
+.hero-pelicula1{
 
 
     position:fixed;
@@ -36,7 +36,7 @@ body {
 /* IMAGEN DE FONDO */
 
 
-.imagen-fondo{
+.imagen-fondo1{
 
 
     position:absolute;
@@ -54,7 +54,7 @@ body {
 /* TRANSPARENCIA ENCIMA */
 
 
-.capa-transparente{
+.capa-transparente1{
 
 
     position:absolute;
@@ -87,7 +87,7 @@ body {
 /* TEXTO ENCIMA */
 
 
-.contenido-pelicula{
+.contenido-pelicula1{
 
 
     position:relative;
@@ -116,7 +116,7 @@ body {
 
 
 
-.contenido-pelicula h1{
+.contenido-pelicula1 h1{
 
 
     font-size:60px;
@@ -134,7 +134,7 @@ body {
 
 
 
-.contenido-pelicula p{
+.contenido-pelicula1 p{
 
 
     max-width:600px;
@@ -155,7 +155,7 @@ body {
 /* BOTONES */
 
 
-.botones{
+.botones1{
 
 
 display:flex;
@@ -170,7 +170,7 @@ margin-top:30px;
 
 
 
-.btn-ver{
+.btn-ver1{
 
 
 background:#6A0DAD;
@@ -196,7 +196,7 @@ transition:0.3s;
 
 
 
-.btn-ver:hover{
+.btn-ver1:hover{
 
 
 background:#FF7A00;
@@ -210,7 +210,7 @@ transform:scale(1.05);
 
 
 
-.btn-lista{
+.btn-lista1{
 
 
 background:transparent;
@@ -236,10 +236,10 @@ font-size:18px;
 
 
 
-.btn-lista:hover{
+.btn-lista1:hover{
 
 
-background:#FF7A00;
+background:#6A0DAD;
 
 
 color:white;
@@ -258,7 +258,7 @@ color:white;
 @media(max-width:390px){
 
 
-.hero-pelicula{
+.hero-pelicula1{
 
 height:70vh;
 
@@ -266,7 +266,7 @@ height:70vh;
 
 
 
-.contenido-pelicula{
+.contenido-pelicula1{
 
 padding:25px;
 
@@ -274,7 +274,7 @@ padding:25px;
 
 
 
-.contenido-pelicula h1{
+.contenido-pelicula1 h1{
 
 
 font-size:35px;
@@ -295,7 +295,7 @@ font-size:35px;
 @media(min-width:768px){
 
 
-.contenido-pelicula h1{
+.contenido-pelicula1 h1{
 
 
 font-size:50px;
@@ -315,7 +315,7 @@ font-size:50px;
 @media(min-width:992px){
 
 
-.contenido-pelicula h1{
+.contenido-pelicula1 h1{
 
 
 font-size:70px;
