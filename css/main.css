@@ -3,10 +3,16 @@
   --color-secondary: #6a0dad;
   --color-tertiary-dark: #343232;
   --color-tertiary-light: #b0b0b0;
+  --color-tertiary-medium: #b0b0b0;
   --color-tertiary: #6e6a73;
   --color-background: #1c1c23;
   --color-light: #fffdfdfe;
   --color-state: #0fffc1, #f32213, #09ebef, #ebe70e;
+  --color-form-input: rgba(52, 50, 50, 0.9);
+  --color-success: #0fffc1;
+  --color-error: #f32213;
+  --color-info: #09ebef;
+  --color-warning: #ebe70e;
   --color-text-primary: #fffdfdfe;
   --color-text-secondary: #ff00b6;
   --color-text-tertiary: #6095c4;
@@ -71,16 +77,10 @@ body {
 
 /* ===== NAVBAR ===== */
 .navbar {
-  background: linear-gradient(
-    90deg,
-    var(--color-tertiary-dark),
-    var(--color-background)
-  );
+  background: linear-gradient(90deg, var(--color-tertiary-dark), var(--color-background));
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--color-primary  );
-  box-shadow:
-    0 10px 30px var(--color-background),
-    0 0 20px var(--color-tertiary-dark);
+  border-bottom: 1px solid var(--color-secondary);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.45), 0 0 20px rgba(255,122,0,0.12);
   padding: 1rem 0;
 }
 .logo {
@@ -207,17 +207,20 @@ body {
   box-shadow: 0 0 0 0.2rem var(--color-primary);
 }
 
+/* Make navbar elements share suscripcion visual tone */
+.navbar-brand { color: var(--color-light); }
+.nav-link { color: var(--color-light); }
+.nav-link:hover { color: var(--color-primary); }
+
+
 /* FOOTER */
 footer{
-    background: linear-gradient(
-        180deg,
-        var(--color-tertiary),
-        var(--color-tertiary-dark)
-    );
-
-    padding: 40px 20px;
-    color: var(--color-text-primary);
-    text-align:center;
+  background: linear-gradient(180deg, var(--color-tertiary-dark), var(--color-background));
+  padding: 40px 20px;
+  color: var(--color-text-primary);
+  text-align:center;
+  border-top: 1px solid var(--color-secondary);
+  box-shadow: 0 -8px 24px rgba(0,0,0,0.35), 0 0 18px rgba(106,13,173,0.06);
 }
 
 
@@ -296,4 +299,274 @@ footer{
 
     color:var(--color-text-secondary);
     font-size:14px;
+}
+
+/* ===== Page-specific: Login ===== */
+body.page-login {
+  background-image: url("../assets/img-form.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+body.page-login .form-card {
+  max-width: 600px;
+  margin: auto;
+  background: var(--color-tertiary-dark);
+  padding: 40px;
+  border-radius: 40px;
+  border: 1px solid var(--color-tertiary-dark);
+  box-shadow: 0 0 15px rgba(255, 122, 0, 0.35);
+}
+
+body.page-login .main-form {
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+
+body.page-login .titulo {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.page-login .form-label {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+body.page-login .form-control,
+body.page-login .form-select {
+  background-color: var(--color-form-input);
+  color: white;
+  border: 1px solid var(--color-secondary);
+}
+
+body.page-login .form-control::placeholder {
+  color: var(--color-tertiary-medium);
+}
+
+body.page-login .form-select option {
+  background-color: var(--color-tertiary-dark);
+  color: white;
+}
+
+body.page-login .form-control:focus,
+body.page-login .form-select:focus {
+  background: transparent;
+  color: white;
+  border-color: var(--color-secondary);
+  box-shadow: none;
+}
+
+body.page-login .btn-register {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  border: none;
+  color: white;
+  padding: 14px;
+  font-weight: 700;
+}
+
+body.page-login .btn-register:hover {
+  transform: translateY(-2px);
+  transition: 0.3s;
+}
+
+body.page-login .form-check-label { color: white; }
+body.page-login .forgot-password { color: var(--color-secondary); text-decoration: none; }
+body.page-login .forgot-password:hover { color: var(--color-primary); }
+body.page-login .login-link { color: white; }
+body.page-login .login-link a { color: var(--color-primary); text-decoration: none; font-weight: 600; }
+body.page-login .login-link a:hover { color: var(--color-secondary); }
+
+@media (max-width: 768px) {
+  body.page-login .main-form { margin-top: 50px; margin-bottom: 50px; }
+  body.page-login .form-card { padding: 25px; }
+  body.page-login .titulo { font-size: 2rem; }
+}
+
+/* ===== Page-specific: Suscripcion ===== */
+body.page-suscripcion {
+  background-image: url("../assets/img-suscripcion.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: white;
+}
+
+body.page-suscripcion .suscripcion-container { margin-top: 180px; margin-bottom: 100px; }
+
+body.page-suscripcion .titulo,
+body.page-suscripcion .titulo-form {
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.page-suscripcion .titulo { font-size: 3rem; }
+
+body.page-suscripcion .plan-card {
+  background: rgba(52, 50, 50, 0.95);
+  padding: 30px;
+  border-radius: 25px;
+  border: 1px solid var(--color-secondary);
+  height: 100%;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+body.page-suscripcion .plan-card:hover { transform: translateY(-5px); }
+body.page-suscripcion .destacado { box-shadow: 0 0 20px rgba(255, 122, 0, 0.5); }
+
+body.page-suscripcion .plan-card h3 { color: var(--color-primary); font-weight: 700; margin-bottom: 20px; }
+body.page-suscripcion .plan-card h2 { margin-bottom: 25px; font-weight: 800; }
+body.page-suscripcion .plan-card ul { padding-left: 20px; margin-bottom: auto; }
+body.page-suscripcion .plan-card li { margin-bottom: 10px; }
+
+body.page-suscripcion .btn-plan,
+body.page-suscripcion .btn-register {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 12px;
+}
+
+body.page-suscripcion .btn-plan:hover,
+body.page-suscripcion .btn-register:hover { transform: translateY(-2px); transition: 0.3s; }
+
+body.page-suscripcion .form-card {
+  max-width: 700px;
+  margin: auto;
+  background: rgba(52, 50, 50, 0.95);
+  padding: 40px;
+  border-radius: 30px;
+  border: 1px solid var(--color-secondary);
+  box-shadow: 0 0 15px rgba(255, 122, 0, 0.35);
+}
+
+body.page-suscripcion .form-control { background-color: rgba(52, 50, 50, 0.9); color: white; border: 1px solid var(--color-secondary); }
+body.page-suscripcion .form-control:focus { background-color: rgba(52, 50, 50, 0.9); color: white; border-color: var(--color-primary); box-shadow: none; }
+body.page-suscripcion .form-control::placeholder { color: var(--color-tertiary-medium); }
+body.page-suscripcion .form-label { color: white; font-weight: 600; }
+body.page-suscripcion .form-select { background-color: rgba(52, 50, 50, 0.9); color: white; border: 1px solid var(--color-secondary); }
+body.page-suscripcion .form-select:focus { background-color: rgba(52, 50, 50, 0.9); color: white; border-color: var(--color-primary); box-shadow: none; }
+body.page-suscripcion .form-check-label { color: white; }
+body.page-suscripcion .plan-seleccionado { background: rgba(106, 13, 173, 0.15); border: 1px solid var(--color-secondary); border-radius: 15px; padding: 15px; text-align: center; }
+body.page-suscripcion .plan-seleccionado h5 { color: var(--color-primary); margin-bottom: 5px; }
+
+@media (max-width: 768px) {
+  body.page-suscripcion .suscripcion-container { margin-top: 80px; margin-bottom: 50px; }
+  body.page-suscripcion .titulo { font-size: 2rem; }
+  body.page-suscripcion .form-card { padding: 25px; }
+}
+
+@media (max-width: 768px) {
+  body.page-suscripcion .plan-card { text-align: center; }
+  body.page-suscripcion .plan-card ul { list-style: none; padding-left: 0; }
+  body.page-suscripcion .plan-card li { margin-bottom: 10px; }
+}
+
+/* ===== Page-specific: Index (consistent visual style) ===== */
+body.page-index {
+  background-image: url("../assets/img-suscripcion.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: white;
+}
+
+body.page-index #catalogo {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+body.page-index #suscripcion {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* make cards use the same panel styling */
+body.page-index .card-catalog,
+body.page-index .card-suscribe {
+  background: rgba(52, 50, 50, 0.95);
+  padding: 20px;
+  border-radius: 25px;
+  border: 1px solid var(--color-secondary);
+  height: 100%;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+body.page-index .card-catalog:hover,
+body.page-index .card-suscribe:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35), 0 0 20px rgba(255,122,0,0.18);
+}
+
+body.page-index .card-catalog .card-img-top {
+  border-radius: 12px;
+  object-fit: cover;
+  max-height: 160px;
+}
+
+body.page-index .card-catalog .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+body.page-index .card-catalog .card-title {
+  font-weight: 800;
+}
+
+body.page-index .card-catalog .card-text {
+  color: var(--color-tertiary-light);
+  margin-bottom: 8px;
+}
+
+body.page-index .card-catalog .btn-primary {
+  align-self: center;
+  padding: 10px 18px;
+}
+
+/* Buttons on index should match suscripcion style */
+body.page-index .btn-primary,
+body.page-index .btn-suscribirse,
+body.page-index .btn-buscar,
+body.page-index .btn-ingresar {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 10px 16px;
+  transition: 0.3s;
+  box-shadow: 0 0 12px rgba(255,122,0,0.12);
+}
+
+body.page-index .btn-primary:hover,
+body.page-index .btn-suscribirse:hover,
+body.page-index .btn-buscar:hover,
+body.page-index .btn-ingresar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255,122,0,0.20);
+  color: var(--color-light);
+}
+
+@media (max-width: 768px) {
+  body.page-index .logo { width: 60px; height: 60px; }
 }
