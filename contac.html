@@ -5,57 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="contact.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
 </head>
 <body>
     <section class="contacto">
-    <div class="container">
 
-        <div class="titulo-contacto">
+    <div class="contacto-container">
+
+        <div class="contacto-info">
+
             <h2>Contacto</h2>
-            <p>¿Tienes alguna duda? Escríbenos y te responderemos.</p>
-        </div>
 
-        <div class="contacto-contenido">
+            <p>
+                Estamos aquí para ayudarte.
+                Contáctanos y te responderemos lo antes posible.
+            </p>
 
-            <form class="formulario">
-
-                <label>Nombre</label>
-                <input type="text" placeholder="Tu nombre">
-
-                <label>Email</label>
-                <input type="email" placeholder="Tu correo">
-
-                <label>Mensaje</label>
-                <textarea placeholder="Escribe tu mensaje"></textarea>
-
-                <button type="submit">
-                    Enviar mensaje
-                </button>
-
-            </form>
-
-
-            <div class="info-contacto">
-
-                <img src="assets/Logo.png" alt="Logo de la empresa" class="logo-contacto">
-
-                <p>
-                    📍 Argentina
-                </p>
-
-                <p>
-                    📧 contacto@ecostream.com
-                </p>
-
-                <p>
-                    ☎ +54 381 000000
-                </p>
-
+            <div class="datos">
+                <p><i class="bi bi-arrow-down-circle-fill"> Dirección: Tucumán, Argentina,San Miguel de Tucumán</i> </p>
+                <p><i class="bi bi-envelope-at"> Email: contacto@ecostream.com</i></p>
+                <p><i class="bi bi-whatsapp"> WhatsApp:+54 381 651 7473</i></p>
             </div>
 
+
+            <!-- MAPA -->
+            <iframe 
+            class="mapa"
+            src="https://www.google.com/maps?q=Tucuman%20Argentina&output=embed"
+            loading="lazy">
+            </iframe>
+
+
         </div>
 
+
+
+        <form class="contacto-form">
+
+            <h3>Envíanos un mensaje</h3>
+
+            <input 
+                     
+               type="text"
+                minlength="2"
+                maxlength="20"
+                pattern="^[A-Za-z]+ [A-Za-z]+$"
+               />
+         
+
+
+            <input 
+            type="Email"
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+            placeholder="Correo electrónico"
+            required="ingrese su correo"
+            name="Email"
+            id="email"
+            >
+
+
+            <textarea 
+            placeholder="Mensaje">
+            </textarea>
+
+
+            <button type="submit">
+                Enviar
+            </button>
+
+
+        </form>
+
+
     </div>
-</section>
 </body>
 </html>

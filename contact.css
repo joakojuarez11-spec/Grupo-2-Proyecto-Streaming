@@ -9,15 +9,64 @@
 }
 
 
+:root{
+
+--color-primary:#FF7A00;
+--color-secondary:#6A0DAD;
+--color-dark:#343232;
+--color-gray:#B0B0B0;
+--color-light:#6e6a73;
+
+}
+
+
 .contacto{
 
-background: linear-gradient(
+background:linear-gradient(
 135deg,
-var(--color-tertiary),
-#1b1b1b
+var(--color-dark),
+var(--color-secondary)
 );
 
-padding:60px 20px;
+padding:70px 20px;
+
+}
+
+
+
+.contacto-container{
+
+max-width:1200px;
+margin:auto;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+
+gap:40px;
+
+background:rgba(255,255,255,0.08);
+
+padding:40px;
+
+border-radius:20px;
+
+backdrop-filter:blur(10px);
+
+}
+
+
+
+.contacto h2{
+
+color:var(--color-primary);
+
+font-size:40px;
+
+}
+
+
+
+.contacto p{
 
 color:white;
 
@@ -25,100 +74,75 @@ color:white;
 
 
 
-.titulo-contacto{
+.datos{
 
-text-align:center;
-
-margin-bottom:40px;
-
-}
-
-
-.titulo-contacto h2{
-
-font-size:40px;
-
-color:var(--color-primary);
+margin:25px 0;
 
 }
 
 
 
-.titulo-contacto p{
-
-color:var(--color-gray);
-
-}
-
-
-
-.contacto-contenido{
-
-display:flex;
-
-justify-content:center;
-
-gap:40px;
-
-flex-wrap:wrap;
-
-}
-
-
-
-.formulario{
-
-background:#222;
-
-padding:30px;
-
-border-radius:20px;
-
-box-shadow:0 0 20px var(--color-shadow);
-
-width:350px;
-
-}
-
-
-
-.formulario label{
-
-display:block;
-
-margin-top:15px;
-
-color:#fff;
-
-}
-
-
-
-
-.formulario textarea{
-
+.mapa{
 
 width:100%;
 
-padding:12px;
+height:300px;
 
-margin-top:8px;
+border:0;
 
-border:none;
+border-radius:15px;
+
+}
+
+
+
+
+
+.contacto-form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+
+
+.contacto-form h3{
+
+color:white;
+
+font-size:28px;
+
+}
+
+
+
+.contacto-form input,
+.contacto-form textarea{
+
+
+padding:15px;
 
 border-radius:10px;
+
+border:none;
 
 background:#343232;
 
 color:white;
 
+outline:none;
+
 }
 
 
 
-.formulario textarea{
+.contacto-form textarea{
 
-height:120px;
+height:150px;
 
 resize:none;
 
@@ -126,129 +150,83 @@ resize:none;
 
 
 
-.formulario button{
+.contacto-form button{
 
 
-margin-top:20px;
+padding:15px;
 
-width:100%;
-
-padding:12px;
 
 border:none;
 
-border-radius:20px;
-
-background:var(--color-primary);
-
-color:white;
-
-font-size:16px;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-
-
-.formulario button:hover{
-
-background:var(--color-secondary);
-
-}
-
-
-
-.info-contacto{
+border-radius:10px;
 
 
 background:linear-gradient(
-145deg,
-#6A0DAD,
-#343232
+90deg,
+var(--color-primary),
+var(--color-secondary)
 );
 
-padding:30px;
-
-border-radius:20px;
-
-width:300px;
-
-height:max-content;
-
-box-shadow:0 0 20px #000;
-
-
-}
-
-
-
-.info-contacto h3{
-
-color:#FF7A00;
-
-font-size:30px;
-
-}
-
-
-.info-contacto p{
 
 color:white;
 
-margin:20px 0;
+font-weight:bold;
+
+cursor:pointer;
+
+
+transition:.3s;
+
 
 }
 
 
 
-/* SM */
+.contacto-form button:hover{
+
+transform:scale(1.05);
+
+}
+
+
+
+/* TABLET */
+
+@media(max-width:768px){
+
+.contacto-container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+
+/* CELULAR */
 
 @media(max-width:576px){
 
-.contacto-contenido{
-
-flex-direction:column;
-
-align-items:center;
-
-}
-
-
-.formulario,
-.info-contacto{
-
-width:90%;
-
-}
-
-}
-
-
-/* MD */
-
-@media(min-width:768px){
-
-.contacto-contenido{
-
-flex-direction:row;
-
-}
-
-}
-
-
-
-/* LG */
-
-@media(min-width:992px){
-
 .contacto{
 
-padding:90px;
+padding:30px 15px;
 
 }
+
+
+.contacto-container{
+
+padding:25px;
+
+}
+
+
+.contacto h2{
+
+font-size:32px;
+
+}
+
 
 }
