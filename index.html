@@ -15,12 +15,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
-  <link rel="shortcut icon" href="https://web.rollingcodeschool.com/images/faviconWhite.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="./assets/Logo.png" type="image/x-icon" />
   <link rel="stylesheet" href="./css/main.css" />
   <title>StreamTuc</title>
 </head>
 
-<body>
+<body class="page-index">
   <header class="sticky-top">
     <nav class="navbar navbar-expand-lg">
       <div class="container">
@@ -34,80 +34,83 @@
         <div class="collapse navbar-collapse" id="navbarContenido">
           <ul class="navbar-nav mx-auto nav-pills">
             <li class="nav-item">
-              <a class="nav-link" href="404.html"> Inicio </a>
+              <a class="nav-link" href="./index.html"> Inicio </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="404.html"> Series </a>
+              <a class="nav-link" href="./pages/series.html"> Series </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="404.html"> Películas </a>
+              <a class="nav-link" href="./pages/movies.html"> Películas </a>
             </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="404.html"> Documentales </a>
-            </li>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Buscar..." aria-label="Recipient’s username"
+                aria-describedby="button-addon2">
+              <a href="./pages/404.html" class="btn btn-buscar" type="button" id="button-addon2">Buscar</a>
+            </div>
           </ul>
-          <form class="d-flex me-lg-3 my-3 my-lg-0" action="404.html">
-            <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar" required />
-
-            <button class="btn btn-buscar" type="submit">Buscar</button>
-          </form>
-          <div class="d-flex gap-5 ms-lg-3 mt-3 mt-lg-0">
-            <a href="404.html" class="btn btn-ingresar"> Login </a>
-
-            <a href="404.html" class="btn btn-suscribirse"> Suscribirse </a>
+          <div class="d-flex gap-2 justify-content-around align-content-center mt-2">
+            <a href="./pages/login.html" class="btn btn-login"> Login </a>
+            <a href="./pages/suscribe.html" class="btn btn-suscribirse"> Suscribirse </a>
           </div>
         </div>
       </div>
     </nav>
   </header>
   <!-- CAROUSEL HERO -->
-  <div class="container-fluid w-100 p-0" data-bs-spy="scroll" data-bs-target="#navbarContenido" data-bs-offset="0"
+  <div class="container-fluid w-100 p-0" data-bs-spy="scroll" data-bs-target="#collapsibleNavbar" data-bs-offset="0"
     class="scrollspy-example" tabindex="0">
+    <!-- CAROUSEL -->
     <main>
-      <div id="hero" class="carousel slide" data-bs-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
-        </ol>
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="true">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="./assets/Pelicula-animada.jpg" alt="Fotografía artistica">
-            <div class="carousel-caption d-md-block">
-              <h5>Coraline</h5>
-              <p>Película animada de 2009.</p>
-              <a href="./404.html" class="btn btn-primary">Ver más</a>
+            <img src="./assets/Pelicula-animada.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Coraline (2009) - 1h 40min</h5>
+              <p>Una niña de 11 años, se muda con sus padres a una antigua casa, donde una puerta secreta que la lleva
+                a un entorno paralelo aparentemente idílico. Allí, encuentra una versión alternativa de sus padres,
+                mucho más cariñosos y atentos, pero que esconden una siniestra verdad..</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="./assets/Pelicula-terror.jpg" alt="Fotografia de arte">
-            <div class="carousel-caption d-md-block">
-              <h5>El conjuro 2</h5>
-              <p>Película de terror de 2016.</p>
-              <a href="./404.html" class="btn btn-primary">Ver más</a>
+            <img src="./assets/Pelicula-terror.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>El Conjuro 2</h5>
+              <p>Siete años después de los eventos de El Conjuro, Lorraine (Vera Farmiga) y Ed Warren (Patrick Wilson)
+                desembarcan en Inglaterra para ayudar a una familia atormentada por una manifestación poltergeist en su
+                hija.</p>
             </div>
           </div>
+
           <div class="carousel-item">
-            <img class="d-block w-100" src="./assets/Serie-1.jpg" alt="Fotografia de retrato">
-            <div class="carousel-caption d-md-block">
-              <h5>Solar Oposites</h5>
-              <p>Serie de ciencia ficción de 2020.</p>
-              <a href="./404.html" class="btn btn-primary">Ver más</a>
+            <img src="./assets/Documental-1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>This is Spinal Tap</h5>
+              <p>El grupo de “hard-rock” británico Spinal Tap hace furor. Los tres jóvenes y fogosos músicos de esta
+                ruidosa formación vuelven locas a las chicas y llenan las salas en cada concierto.</p>
             </div>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#hero" role="button" data-bs-slide="prev">
-          <span class="" aria-hidden="true"></span>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#hero" role="button" data-bs-slide="next">
-          <span class="" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
-        </a>
+        </button>
       </div>
     </main>
+
     <section class="" id="catalogo">
       <div class="container my-5">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
@@ -119,7 +122,7 @@
                 <h5 class="card-title">Peliculas animadas para toda la familia</h5>
                 <p class="card-text">Peliculas animadas para todas las edades!</p>
                 <div class="d-flex justify-content-center align-items-center">
-                  <a href="./404.html" class="btn btn-primary">Ver más</a>
+                  <a href="./pages/404.html" class="btn btn-primary">Ver más</a>
                 </div>
               </div>
             </div>
@@ -131,7 +134,7 @@
                 <h5 class="card-title">Peliculas para temblar de terror</h5>
                 <p class="card-text">Experimenta el miedo con nuestras películas de terror que te harán temblar.</p>
                 <div class="d-flex justify-content-center align-items-center">
-                  <a href="./404.html" class="btn btn-primary">Ver más</a>
+                  <a href="./pages/movies.html" class="btn btn-primary">Ver más</a>
                 </div>
               </div>
             </div>
@@ -143,7 +146,7 @@
                 <h5 class="card-title">Lo nuevo en Series</h5>
                 <p class="card-text">Descubre historias fascinantes a través de nuestras series.</p>
                 <div class="d-flex justify-content-center align-items-center">
-                  <a href="./404.html" class="btn btn-primary">Ver más</a>
+                  <a href="./pages/series.html" class="btn btn-primary">Ver más</a>
                 </div>
               </div>
             </div>
@@ -155,7 +158,7 @@
                 <h5 class="card-title">Documentales, mas real que la ficcion</h5>
                 <p class="card-text">Descubre historias reales y fascinantes a través de nuestros documentales.</p>
                 <div class="d-flex justify-content-center align-items-center">
-                  <a href="./404.html" class="btn btn-primary">Ver más</a>
+                  <a href="./pages/404.html" class="btn btn-primary">Ver más</a>
                 </div>
               </div>
             </div>
@@ -166,87 +169,68 @@
     </section>
     <section id="suscripcion">
       <!-- PLANES DE SUSCRIPCION  -->
-      <div class="container-fluid row row-cols-sm-1 row-cols-md-3 g-2 g-md-4 my-5 p-2">
-        <div class="col">
-          <div class="card card-suscribe text-center">
-            <div class="card-body">
-              <h5 class="card-title">Plan Básico</h5>
-              <p class="card-text">Acceso a contenido en calidad SD para un dispositivo.</p>
-              <h6 class="card-price">$5.99/mes</h6>
-              <a class="btn btn-primary" href="./404.html">Suscribirse</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card card-suscribe text-center">
-            <div class="card-body">
-              <h5 class="card-title">Plan Premium</h5>
-              <p class="card-text">Acceso a contenido en calidad HD para hasta 4 dispositivos.</p>
-              <h6 class="card-price">$9.99/mes</h6>
-              <a class="btn btn-primary" href="./404.html">Suscribirse</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card card-suscribe text-center">
-            <div class="card-body">
-              <h5 class="card-title">Plan Streamer</h5>
-              <p class="card-text">Acceso a contenido en calidad 4K para retransmisiones.</p>
-              <h6 class="card-price">$14.99/mes</h6>
-              <a class="btn btn-primary" href="./404.html">Suscribirse</a>
+      <div class="p-5 text-center bg-image rounded-3">
+        <div class="mask">
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+              <h1 class="mb-3">Todavía no sos usuario?</h1>
+              <h4 class="mb-3">Sumáte a la familia de StreamTuc!</h4>
+              <a data-mdb-ripple-init class="btn btn-outline-primary btn-lg" href="./pages/suscribe.html"
+                role="button">Registrarme</a>
             </div>
           </div>
         </div>
       </div>
+      <!-- Hero -->
     </section>
-    <footer>
-      <!-- FOOTER  -->
-      <div class="footer-container">
+  </div>
+  <footer>
+    <!-- FOOTER  -->
+    <div class="footer-container">
 
-        <div class="footer-section col-sm-12 col-md-4 col-lg-4">
-          <img src="./assets/logo.png" alt="Logo StreamingTuc" class="logo" />
-          <p>
-            Disfruta tus contenidos favoritos
-            en una plataforma moderna.
-          </p>
-        </div>
-
-
-        <div class="footer-section col-sm-12 col-md-4 col-lg-4">
-          <h3>Enlaces</h3>
-
-          <a href="#">Inicio</a><br>
-          <a href="#">Películas</a><br>
-          <a href="#">Series</a>
-
-        </div>
+      <div class="footer-section col-sm-12 col-md-4 col-lg-4">
+        <img src="./assets/logo.png" alt="Logo StreamingTuc" class="logo" />
+        <p>
+          Disfruta tus contenidos favoritos
+          en una plataforma moderna.
+        </p>
+      </div>
 
 
-        <div class="footer-section  col-sm-12 col-md-4 col-lg-4  ">
-          <h3>Seguinos</h3>
+      <div class="footer-section col-sm-12 col-md-4 col-lg-4">
+        <h3>Enlaces</h3>
 
-          <div class="footer-icons">
+        <a href="./index.html">Inicio</a><br>
+        <a href="./pages/movies.html">Películas</a><br>
+        <a href="./pages/series.html">Series</a>
 
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-facebook"></i>
-            <i class="bi bi-twitter"></i>
+      </div>
 
-          </div>
+      <div class="footer-section  col-sm-12 col-md-4 col-lg-4  ">
+        <h3>Seguinos</h3>
+
+        <div class="footer-icons">
+
+          <a href="./pages/404.html" class="bi bi-instagram"></a>
+          <a href="./pages/404.html" class="bi bi-facebook"></a>
+          <a href="./pages/404.html" class="bi bi-twitter"></a>
 
         </div>
 
       </div>
 
+    </div>
 
-      <div class="footer-bottom">
-        © 2026 StreamTuc - Todos los derechos reservados
-      </div>
 
-    </footer>
-    <!-- INYECCION SCRIPT BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"></script>
+    <div class="footer-bottom">
+      © 2026 StreamTuc - Todos los derechos reservados
+    </div>
+
+  </footer>
+  <!-- INYECCION SCRIPT BOOTSTRAP -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
