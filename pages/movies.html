@@ -1,126 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="details.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <title>Detalles de peliculas</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="StreamTuc - Tu plataforma de streaming favorita" />
+  <meta name="keywords" content="streaming, películas, series, entretenimiento" />
+  <meta name="author" content="StreamTuc" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel="shortcut icon" href="../assets/Logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <title>StreamTuc</title>
 </head>
-<body>
-   
-    <section class="hero-pelicula">
 
+<body class="page-index">
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../assets/Streamtuc_logo.png" alt="Logo StreamingTuc" class="logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido"
+          aria-controls="navbarContenido" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContenido">
+          <ul class="navbar-nav mx-auto nav-pills">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html"> Inicio </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./series.html"> Series </a>
+            </li>
 
-
-    <!-- Imagen de fondo -->
-
-   
-       <img src="assets/Detalles-animada.jpg" alt="Imagen de fondo" class="imagen-fondo">
-
-
-    <!-- Capa transparente -->
-
-    <div class="capa-transparente"></div>
-
-
-
-
-
-    <!-- Contenido arriba de la imagen -->
-
-
-    <div class="contenido-pelicula">
-
-
-
-        <h1>
-
-            Caroline
-
-        </h1>
-
-
-
-
-        <div class="informacion">
-
-
-            <span>
-                ⭐ 8.5
-            </span>
-            /
-            <span>
-                2009
-            </span>
-            /
-            <span>
-                Terror,Fantasía
-            </span>
-            /
-            <span>
-                1h 40min
-            </span>
-            /
-            <span>
-               edad +10
-            </span>
-
+            <li class="nav-item">
+              <a class="nav-link" href="./movies.html"> Películas </a>
+            </li>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Buscar..." aria-label="Recipient’s username"
+                aria-describedby="button-addon2">
+              <a href="./404.html" class="btn btn-buscar" type="button" id="button-addon2">Buscar</a>
+            </div>
+          </ul>
+          <div class="d-flex gap-2 justify-content-around align-content-center mt-2">
+            <a href="./login.html" class="btn btn-login"> Login </a>
+            <a href="./suscribe.html" class="btn btn-suscribirse"> Suscribirse </a>
+          </div>
         </div>
+      </div>
+    </nav>
+  </header>
 
 
+  <div class="container-fluid w-100 p-0">
+    <main>
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6"> <img src="../assets/Pelicula-terror.jpg"
+              class="d-block mx-lg-auto img-fluid" alt="Solar Opposites" width="700" height="500" loading="lazy"> </div>
+          <div class="col-lg-6">
+            <h5>El Conjuro 2
+            </h5>
+            <p>Siete años después de los eventos de El Conjuro, Lorraine (Vera Farmiga) y Ed Warren (Patrick Wilson)
+              desembarcan en Inglaterra para ayudar a una familia atormentada por una manifestación poltergeist en su
+              hija.</p>
+            <div class="row g-2">
+              <a href="./404.html" class="btn btn-primary btn-lg px-4 me-md-2"><i class="bi bi-play-fill"></i>
+                Reproducir</a>
+              <a href="./404.html" class="btn btn-outline-secondary btn-lg px-4"><i class="bi bi-heart"> Mi
+                  Lista</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+  </main>
+  <section class="catalog">
+    <div class="container-fluid p-3 g-3">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-gap-3">
+        <div class="col">
+          <div class="card card-catalog">
+            <img src="../assets/Pelicula-2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">The Evil Dead (1981)</h5>
+              <p class="card-text">Cinco amigos viajan a una cabaña en el bosque, donde sin saberlo liberan demonios poseedores de carne.</p>
+              <div class="row g-2">
+                <a href="./404.html" class="btn btn-primary btn-lg px-4 me-md-2"><i class="bi bi-play-fill"></i>
+                  Reproducir</a>
+                <a href="./404.html" class="btn btn-outline-secondary btn-lg px-4"><i class="bi bi-heart"> Mi
+                    Lista</i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-catalog">
+            <img src="../assets/Pelicula-3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">El Exorcista (1973)</h5>
+              <p class="card-text">Cuando una adolescente es poseída por una entidad misteriosa, su madre busca la ayuda de dos sacerdotes para salvar a su hija.</p>
+              <div class="row g-2">
+                <a href="./404.html" class="btn btn-primary btn-lg px-4 me-md-2"><i class="bi bi-play-fill"></i>
+                  Reproducir</a>
+                <a href="./404.html" class="btn btn-outline-secondary btn-lg px-4"><i class="bi bi-heart"> Mi
+                    Lista</i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-catalog">
+            <img src="../assets/Pelicula-4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">It Follows (2014)</h5>
+              <p class="card-text">Luego de un encuentro sexual, una entidad sobrenatural persigue a una joven mujer.</p>
+              <div class="row g-2">
+                <a href="./404.html" class="btn btn-primary btn-lg px-4 me-md-2"><i class="bi bi-play-fill"></i>
+                  Reproducir</a>
+                <a href="./404.html" class="btn btn-outline-secondary btn-lg px-4"><i class="bi bi-heart"> Mi
+                    Lista</i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-catalog">
+            <img src="../assets/Pelicula-5.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Cienpiés Humano (2009)</h5>
+              <p class="card-text">Un científico loco secuestra a un trío de turistas, los mutila y los convierte en un ciempiés humano, creado cosiendo sus bocas a los rectos de los demás.</p>
+              <div class="row g-2">
+                <a href="./404.html" class="btn btn-primary btn-lg px-4 me-md-2"><i class="bi bi-play-fill"></i>
+                  Reproducir</a>
+                <a href="./404.html" class="btn btn-outline-secondary btn-lg px-4"><i class="bi bi-heart"> Mi
+                    Lista</i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-catalog">
+            <img src="../assets/Pelicula-6.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Possum (2018)</h5>
+              <p class="card-text">Después de regresar a la casa de su infancia, un titiritero de niños se ve obligado a confrontar a su malvado padrastro y los secretos que han torturado toda su vida.</p>
+              <div class="row g-2">
+                <a href="./404.html" class="btn btn-primary btn-lg px-4 me-md-2"><i class="bi bi-play-fill"></i>
+                  Reproducir</a>
+                <a href="./404.html" class="btn btn-outline-secondary btn-lg px-4"><i class="bi bi-heart"> Mi
+                    Lista</i></a>
+              </div>
+            </div>
+          </div>|
+        </div>
+        <div class="col">
+          <div class="card card-catalog">
+            <img src="../assets/Pelicula-7.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">The Void (2016)</h5>
+              <p class="card-text">Un agente vive sucesos extraños y violentos aparentemente vinculados a un grupo de misteriosas figuras encapuchadas tras llevar a un hombre al hospital.</p>
+              <div class="row g-2">
+                <a href="./404.html" class="btn btn-primary btn-lg px-4 me-md-2"><i class="bi bi-play-fill"></i>
+                  Reproducir</a>
+                <a href="./404.html" class="btn btn-outline-secondary btn-lg px-4"><i class="bi bi-heart"> Mi
+                    Lista</i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="container-fluid p-3 g-2">
+      <div class="col-12">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </section>
+  </div>
+  <footer>
+    <!-- FOOTER  -->
+    <div class="footer-container">
 
-
-
+      <div class="footer-section col-sm-12 col-md-4 col-lg-4">
+        <img src="../assets/logo.png" alt="Logo StreamingTuc" class="logo" />
         <p>
-
-         una niña de 11 años, se muda con sus padres a una antigua casa, donde una puerta secreta que la lleva
-         a un entorno paralelo aparentemente idílico. Allí, encuentra una versión alternativa de sus padres,
-         mucho más cariñosos y atentos, pero que esconden una siniestra verdad.
-           
-
-
+          Disfruta tus contenidos favoritos
+          en una plataforma moderna.
         </p>
+      </div>
 
 
-            <div class="botones">
+      <div class="footer-section col-sm-12 col-md-4 col-lg-4">
+        <h3>Enlaces</h3>
 
+        <a href="../index.html">Inicio</a><br>
+        <a href="./movies.html">Películas</a><br>
+        <a href="./series.html">Series</a>
 
-        <a href="404.html" class="btn-ver">
+      </div>
 
-         <i class="bi bi-play-fill">Ver ahora</i> 
+      <div class="footer-section  col-sm-12 col-md-4 col-lg-4  ">
+        <h3>Seguinos</h3>
 
-    </a>
+        <div class="footer-icons">
 
-
-
-    <a href="404.html" class="btn-lista">
-
-        <i class="bi bi-plus-circle"> Mi lista</i>
-
-
-    </a>
-
-
-</div>
-
-
+          <a href="./404.html" class="bi bi-instagram"></a>
+          <a href="./404.html" class="bi bi-facebook"></a>
+          <a href="./404.html" class="bi bi-twitter"></a>
 
         </div>
 
-
-
+      </div>
 
     </div>
 
 
+    <div class="footer-bottom">
+      © 2026 StreamTuc - Todos los derechos reservados
+    </div>
 
-
-</section>
-
-
-
-   
+  </footer>
+  <!-- INYECCION SCRIPT BOOTSTRAP -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
