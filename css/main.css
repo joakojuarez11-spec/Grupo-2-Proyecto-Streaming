@@ -70,6 +70,7 @@ h6 {
 
 .btn-login {
   background: transparent;
+  align-content: center;
   border: none;
   color: var(--color-primary);
   font-weight: 700;
