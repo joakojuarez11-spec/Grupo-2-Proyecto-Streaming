@@ -48,8 +48,8 @@ h6 {
   color: var(--color-tertiary);
 }
 
-.titulo,
-.titulo-form {
+.tittle,
+.tittle-form {
   font-weight: 800;
   background: linear-gradient(
     90deg,
@@ -94,8 +94,8 @@ h6 {
 }
 
 .btn-primary,
-.btn-buscar,
-.btn-suscribirse {
+.btn-search,
+.btn-suscribe {
   background: linear-gradient(
     90deg,
     var(--color-primary),
@@ -109,7 +109,7 @@ h6 {
 }
 
 .btn-primary:hover,
-.btn-suscribirse:hover {
+.btn-suscribe:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px var(--color-shadow-primary-strong);
   color: var(--color-light);
@@ -321,7 +321,7 @@ body {
   margin-bottom: 100px;
 }
 
-.titulo {
+.tittle {
   font-size: 1.2rem;
 }
 
@@ -380,7 +380,7 @@ body {
   .form-card {
     padding: 25px;
   }
-  .titulo {
+  .tittle {
     font-size: 2rem;
   }
 }
@@ -391,7 +391,7 @@ body {
   margin-bottom: 100px;
 }
 
-.titulo {
+.tittle {
   font-size: 3rem;
 }
 
@@ -527,14 +527,14 @@ body {
 .form-check-label {
   color: var(--color-text-primary);
 }
-.plan-seleccionado {
+.plan-select {
   background: var(--color-overlay-secondary);
   border: 1px solid var(--color-secondary);
   border-radius: 15px;
   padding: 15px;
   text-align: center;
 }
-.plan-seleccionado h5 {
+.plan-select h5 {
   color: var(--color-primary);
   margin-bottom: 5px;
 }
@@ -544,7 +544,7 @@ body {
     margin-top: 80px;
     margin-bottom: 50px;
   }
-  .titulo {
+  .tittle {
     font-size: 2rem;
   }
   .form-card {
@@ -622,8 +622,8 @@ body {
 
 /* Buttons on index should match suscripcion style */
 .btn-primary,
-.btn-suscribirse,
-.btn-buscar {
+.btn-suscribe,
+.btn-search {
   background: linear-gradient(
     90deg,
     var(--color-primary),
@@ -638,7 +638,7 @@ body {
 }
 
 .btn-primary:hover,
-.btn-suscribirse:hover,
+.btn-suscribe:hover,
 .btn-login:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px var(--color-shadow-primary-strong);
