@@ -38,8 +38,18 @@
   text-shadow: 0 0 5px var(--color-background);
 }
 
-.titulo,
-.titulo-form {
+h2 {
+  color: var(--color-primary);
+}
+h4 {
+  color: var(--color-text-primary);
+}
+h6 {
+  color: var(--color-tertiary);
+}
+
+.tittle,
+.tittle-form {
   font-weight: 800;
   background: linear-gradient(
     90deg,
@@ -69,7 +79,14 @@
 }
 
 .bg-image {
-  background-image: url("../assets/hero-promo.jpg");
+  background-image: linear-gradient(45deg,transparent,var(--color-background)), url("../assets/hero-promo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-shadow: 0 0 5px var(--color-background);
+}
+.bg-serie {
+  background: linear-gradient(45deg,transparent,var(--color-background)), url("../assets/Episode-1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -77,8 +94,8 @@
 }
 
 .btn-primary,
-.btn-buscar,
-.btn-suscribirse {
+.btn-search,
+.btn-suscribe {
   background: linear-gradient(
     90deg,
     var(--color-primary),
@@ -92,7 +109,7 @@
 }
 
 .btn-primary:hover,
-.btn-suscribirse:hover {
+.btn-suscribe:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px var(--color-shadow-primary-strong);
   color: var(--color-light);
@@ -105,7 +122,7 @@
     var(--color-secondary)
   );
   border: none;
-
+  color: var(--color-text-primary);
   font-weight: 700;
   padding: 14px;
   transition: 0.3s;
@@ -304,18 +321,19 @@ body {
   margin-bottom: 100px;
 }
 
-.titulo {
+.tittle {
   font-size: 1.2rem;
 }
 
 .form-label {
   font-weight: 600;
+  color: var(--color-text-primary);
 }
 
 .form-control,
 .form-select {
   background-color: var(--color-form-input);
-
+  color: var(--color-text-primary);
   border: 1px solid var(--color-secondary);
 }
 
@@ -362,7 +380,7 @@ body {
   .form-card {
     padding: 25px;
   }
-  .titulo {
+  .tittle {
     font-size: 2rem;
   }
 }
@@ -373,7 +391,7 @@ body {
   margin-bottom: 100px;
 }
 
-.titulo {
+.tittle {
   font-size: 3rem;
 }
 
@@ -403,13 +421,29 @@ body {
  --bs-btn-active-color: #fff;
  --bs-btn-active-bg: var(--color-secondary);
  --bs-btn-active-border-color: var(--color-primary);
- --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+ --bs-btn-active-shadow: inset 0 3px 5px var(--color-background);
  --bs-btn-disabled-color: var(--color-primary);
  --bs-btn-disabled-bg: transparent;
  --bs-btn-disabled-border-color: var(--color-primary);
  --bs-gradient: none;
 }
 
+.btn-outline-secondary {
+ --bs-btn-color: var(--color-text-secondary);
+ --bs-btn-border-color: var(--color-text-secondary);
+ --bs-btn-hover-color: #fff;
+ --bs-btn-hover-bg: var(--color-text-secondary);
+ --bs-btn-hover-border-color: var(--color-text-secondary);
+ --bs-btn-focus-shadow-rgb: 108, 117, 125;
+ --bs-btn-active-color: #fff;
+ --bs-btn-active-bg: var(--color-text-secondary);
+ --bs-btn-active-border-color: var(--color-text-secondary);
+ --bs-btn-active-shadow: inset 0 3px 5px var(--color-background);
+ --bs-btn-disabled-color: var(--color-text-secondary);
+ --bs-btn-disabled-bg: transparent;
+ --bs-btn-disabled-border-color: var(--color-text-secondary);
+ --bs-gradient: none;
+}
 
 .plan-card h3 {
   color: var(--color-primary);
@@ -417,12 +451,14 @@ body {
   margin-bottom: 20px;
 }
 .plan-card h2 {
+  color: var(--color-light);
   margin-bottom: 25px;
   font-weight: 800;
 }
 .plan-card ul {
   padding-left: 20px;
   margin-bottom: auto;
+  color: var(--color-tertiary);
 }
 .plan-card li {
   margin-bottom: 10px;
@@ -473,6 +509,10 @@ body {
 .form-label {
   font-weight: 600;
 }
+
+.form-text {
+  height: 25vh;
+}
 .form-select {
   background-color: var(--color-overlay-light);
 
@@ -487,14 +527,14 @@ body {
 .form-check-label {
   color: var(--color-text-primary);
 }
-.plan-seleccionado {
+.plan-select {
   background: var(--color-overlay-secondary);
   border: 1px solid var(--color-secondary);
   border-radius: 15px;
   padding: 15px;
   text-align: center;
 }
-.plan-seleccionado h5 {
+.plan-select h5 {
   color: var(--color-primary);
   margin-bottom: 5px;
 }
@@ -504,7 +544,7 @@ body {
     margin-top: 80px;
     margin-bottom: 50px;
   }
-  .titulo {
+  .tittle {
     font-size: 2rem;
   }
   .form-card {
@@ -582,8 +622,8 @@ body {
 
 /* Buttons on index should match suscripcion style */
 .btn-primary,
-.btn-suscribirse,
-.btn-buscar {
+.btn-suscribe,
+.btn-search {
   background: linear-gradient(
     90deg,
     var(--color-primary),
@@ -598,7 +638,7 @@ body {
 }
 
 .btn-primary:hover,
-.btn-suscribirse:hover,
+.btn-suscribe:hover,
 .btn-login:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px var(--color-shadow-primary-strong);
