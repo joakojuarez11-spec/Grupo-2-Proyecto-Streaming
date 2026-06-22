@@ -1,5 +1,8 @@
 @import "navbar.css";
 @import "footer.css";
+@import "404.css";
+@import "login.css";
+@import "suscribe.css";
 
 :root {
   --color-primary: rgb(255, 122, 0);
@@ -128,7 +131,6 @@ h6 {
   border: none;
   color: var(--color-text-primary);
   font-weight: 700;
-  padding: 14px;
   transition: 0.3s;
   box-shadow: 0 0 12px var(--color-shadow-primary-soft);
 }

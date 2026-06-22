@@ -1,0 +1,24 @@
+/* 404 ERROR PAGE  */
+
+.error404 {
+  min-height: 100vh;
+  background-image: url("../assets/404-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+}
+.error-number {
+  font-size: 10rem;
+  font-weight: 900;
+
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
