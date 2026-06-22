@@ -236,7 +236,7 @@ body {
 .plan-card ul {
   padding-left: 20px;
   margin-bottom: auto;
-  color: var(--color-tertiary);
+  color: var(--color-text-primary);
 }
 .plan-card li {
   margin-bottom: 10px;
